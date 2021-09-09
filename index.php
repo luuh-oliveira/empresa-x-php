@@ -4,6 +4,11 @@ require("./funcoes.php");
 
 $funcionarios = lerArquivo("./empresaX.json");
 
+if (isset($_GET["buscar"])) {
+    $funcionarios = buscarFuncionário($funcionarios, $_GET["buscar"]);
+}
+
+$total = count($funcionarios);
 
 
 ?>
@@ -21,6 +26,7 @@ $funcionarios = lerArquivo("./empresaX.json");
 <body>
     <div class="paginaFuncionarios">
         <h1>Funcionários da empresa X</h1>
+        <p>A empresa conta com <?=$total?> funcionários</p>
         <form action="">
             <div class="campoBusca">
             <label for="buscar">Pesquisar por nome, sobrenome ou departamento</label>
