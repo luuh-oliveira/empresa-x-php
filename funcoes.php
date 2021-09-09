@@ -14,13 +14,13 @@ function buscarFuncionário ($funcionarios, $pesquisa){
     $funcionariosFiltro = [];
 
     foreach ($funcionarios as $funcionario) {
-        if ($funcionario->first_name == $pesquisa) {
+        if (strpos($funcionario->first_name, $pesquisa) !== false) {
             $funcionariosFiltro[] = $funcionario;
-        } elseif ($funcionario->last_name == $pesquisa) {
+        } elseif (strpos($funcionario->last_name, $pesquisa) !== false) {
             $funcionariosFiltro[] = $funcionario;
-        } elseif ($funcionario->department == $pesquisa) {
+        } elseif (strpos($funcionario->department, $pesquisa) !== false) {
             $funcionariosFiltro[] = $funcionario;
-        }
+        } 
     }
     return $funcionariosFiltro;
     
