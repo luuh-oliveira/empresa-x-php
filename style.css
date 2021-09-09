@@ -67,3 +67,38 @@ th, td{
     border: 1px solid gray;
 }
 
+.modal-form{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0009;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+  
+#form-funcionario{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 4px;
+    gap: 5px;
+    
+    background-color: darkgray;
+    box-shadow: 0px 0px 20px #000;
+}
+
+#btnAddFuncionario, .salvar{
+    width: fit-content;
+    height: fit-content;
+    background-color: transparent;
+    border: 1px solid darkgray;
+    border-radius: 4px;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}

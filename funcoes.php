@@ -4,8 +4,8 @@ function lerArquivo($nomeArquivo){
 
     $arquivo = file_get_contents($nomeArquivo);
 
-    $jsonArray = json_decode($arquivo);
-    return $jsonArray;
+    $arquivoArray = json_decode($arquivo);
+    return $arquivoArray;
 
 }
 
@@ -14,11 +14,13 @@ function buscarFuncionário ($funcionarios, $pesquisa){
     $funcionariosFiltro = [];
 
     foreach ($funcionarios as $funcionario) {
-        if (strpos($funcionario->first_name, $pesquisa) !== false) {
-            $funcionariosFiltro[] = $funcionario;
-        } elseif (strpos($funcionario->last_name, $pesquisa) !== false) {
-            $funcionariosFiltro[] = $funcionario;
-        } elseif (strpos($funcionario->department, $pesquisa) !== false) {
+        if (
+            strpos($funcionario->first_name, $pesquisa) !== false
+            ||
+            strpos($funcionario->last_name, $pesquisa) !== false
+            ||
+            strpos($funcionario->department, $pesquisa) !== false
+        ) {
             $funcionariosFiltro[] = $funcionario;
         } 
     }
@@ -26,3 +28,14 @@ function buscarFuncionário ($funcionarios, $pesquisa){
     
 }
 
+function adicionarFuncionario($nomeArquivo, $novoFuncionario){
+    
+    $funcionarios = lerArquivo($nomeArquivo);
+
+    $funcionarios[] = $novoFuncionario;
+
+    $json = json_encode($funcionarios);
+
+    file_put_contents($nomeArquivo, $json);
+
+}
