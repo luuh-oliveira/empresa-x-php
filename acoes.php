@@ -15,4 +15,4 @@ $novoFuncionario = [
 
 adicionarFuncionario("./dados/empresaX.json", $novoFuncionario);
 
-header("location: index.php");
+header("location: funcionarios.php");

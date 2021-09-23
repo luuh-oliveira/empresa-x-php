@@ -15,6 +15,6 @@
 
     editarFuncionario("./dados/empresaX.json", $funcionarioEditado);
 
-    header("location: index.php");
+    header("location: funcionarios.php");
 
 ?>
