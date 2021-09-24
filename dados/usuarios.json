@@ -1,14 +1,14 @@
 [
     {
-        "usuario": "cristiano",
+        "usuario": "Cristiano",
         "senha": "123456"
     },
     {
-        "usuario": "maria",
+        "usuario": "Maria",
         "senha": "654321"
     },
     {
-        "usuario": "joao",
+        "usuario": "Joao",
         "senha": "789012"
     }
 ]

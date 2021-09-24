@@ -18,4 +18,5 @@ function editar(idFuncionario) {
 
 }
 
+
 document.getElementById("btnAddFuncionario").addEventListener("click", showModal);

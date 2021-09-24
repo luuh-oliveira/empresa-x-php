@@ -6,11 +6,34 @@
 
 body{
     display: flex;
+    flex-direction: column;
     width: auto;
     height: auto;
     justify-content: center;
-    padding: 20px;
     background-color: rgb(223, 221, 221);
+}
+
+header{
+    display: flex;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    background-color: whitesmoke;
+    margin-bottom: 70px;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+main{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    width: 80%;
 }
 
 .paginaFuncionarios{
