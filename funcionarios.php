@@ -62,7 +62,6 @@ $total = count($funcionarios);
                     <input type="text" placeholder="Digite o IP" name="ip_address" />
                     <input type="text" placeholder="Digite o país" name="country" />
                     <input type="text" placeholder="Digite o departamento" name="department" />
-                    <button type="header" class="cancelar">Cancelar</button>
                     <button class="salvar">Salvar</button>
                 </form>
             </div>
